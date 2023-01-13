@@ -211,7 +211,11 @@ public class tictactoeframe extends javax.swing.JFrame {
         
     }
     public void resetGame()
+    
     {
+        
+            
+        
         btn1.setText("");
         btn2.setText("");
         btn3.setText("");
@@ -754,10 +758,13 @@ public class tictactoeframe extends javax.swing.JFrame {
     }//GEN-LAST:event_exitActionPerformed
 
     private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
+        JFrame frame=new JFrame("Reset");
+        if (JOptionPane.showConfirmDialog(frame,"Confirm if you want to reset","TIC TAC TOE",JOptionPane.YES_NO_OPTION)== JOptionPane.YES_NO_OPTION)
+        {
         resetGame();
         xscore.setText("0");
         oscore.setText("0");
-        
+        } 
     }//GEN-LAST:event_resetActionPerformed
 
     /**
